@@ -8,7 +8,7 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
+            <input type="hidden" name="tenant" value="{{ $tenant ?? '' }}"/>
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" />
