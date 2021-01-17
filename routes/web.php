@@ -23,7 +23,7 @@ use App\Http\Controllers\Central\Auth\VerifyEmailController;
 
 
 //admin routes
-Route::group(['prefix' => null, 'namespace' => 'Central', 'middleware' => []], function() {
+Route::group(['prefix' => null, 'namespace' => 'Central', 'middleware' => ['web']], function() {
 
     //public central routes
     Route::get('/', [\App\Http\Controllers\Central\WelcomeController::class, 'getIndex'])->name('centralHome');
@@ -81,6 +81,6 @@ Route::group(['prefix' => null, 'namespace' => 'Central', 'middleware' => []], f
         ->name('logout');
 
     //authenticated admin routes
-    Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['auth', 'web']], function () {
     });
 });

@@ -18,6 +18,8 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(Request $request)
     {
+        //dd([session()->getId()]);
+
         return $this->view([
             'content' => 'pages.auth.login',
         ]);
