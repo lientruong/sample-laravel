@@ -10,7 +10,7 @@ Sample Laravel is basic application demonstrating features of the Laravel
 - Custom session driver to add additional database field
 - Eloquent ORM sample observer
 - Exception handling for non-existing tenants
-
+- Docker modification for phpMyAdmin and XDebug support
 This sample project is to illustrate the various functionality of a typical website using the Laravel 
 framework with some light customizations.
 
@@ -22,6 +22,7 @@ After pulling the project from this repository, run the following commands to tr
 sample application:
 
 - composer install to install all dependencies and packages
+- npm update to install all dependencies and packages
 - npm run dev to build assets
 - sail up -d
 - sail artisan migrate & sail artisan tenants:migrate to migrate sample tables into the database
@@ -88,3 +89,11 @@ Redirect non-existing tenants (subdomains) to the central home page.
 
 Files:
 -  app/Exception/Handler.php
+
+## Docker modification for phpMyAdmin and XDebug support
+
+Modified existing Dockerfile and docker-compose.yml to support XDebug and add phpMyAdmin on port 2087
+
+Files:
+-  resources/docker
+-  docker-compose.yml
