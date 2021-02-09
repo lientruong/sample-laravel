@@ -21,4 +21,3 @@ yarn-error.log
 /public
 /.env.example
 /package-lock.json
-/README.md
