@@ -13,10 +13,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-/artisan
 /composer.lock
 /sail
-/server.php
 /.editorconfig
 /public
 /.env.example
