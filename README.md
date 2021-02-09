@@ -1,6 +1,7 @@
 ## About Sample Laravel
 
-Sample Laravel is a very basic application showcasing various features of the Laravel framework
+Sample Laravel is basic application demonstrating features of the Laravel 
+ framework:
 
 - Multi-tenant development and example
 - Basic authentication with login and logout
