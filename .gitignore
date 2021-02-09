@@ -1,8 +1,6 @@
 /.idea
 /.idea/*
 /node_modules
-/public/hot
-/public/storage
 /vendor
 .env.backup
 .phpunit.result.cache
@@ -13,6 +11,7 @@ npm-debug.log
 yarn-error.log
 /composer.lock
 /.editorconfig
-/public
+/public/css
+/public/js
 /.env.example
 /package-lock.json
