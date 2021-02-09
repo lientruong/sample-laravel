@@ -7,6 +7,5 @@
     @include('content')
 </div>
 @include('footer')
-@include('footerScripts')
 </body>
 </html>

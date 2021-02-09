@@ -1,33 +1,22 @@
-<form method="POST" action="{{ url('login') }}">
-    @csrf
+<div class="bd-example">
+    <form>
 
-    <div>
-        <label for="email" value="{{ __('Email') }}" />
-        <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+    </form>
+</div>
+<div class="row">
+    <div class="col-6 offset-3">
+        <form method="POST" action="{{ url('login') }}">
+            @csrf
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="a@a.com">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value="abc">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-
-    <div class="mt-4">
-        <label for="password" value="{{ __('Password') }}" />
-        <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-    </div>
-
-    <div class="block mt-4">
-        <label for="remember_me" class="flex items-center">
-            <checkbox id="remember_me" name="remember" />
-            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-        </label>
-    </div>
-
-    <div class="flex items-center justify-end mt-4">
-        @if (Route::has('password.request'))
-            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                {{ __('Forgot your password?') }}
-            </a>
-        @endif
-
-        <button class="ml-4">
-            {{ __('Login') }}
-        </button>
-    </div>
-</form>
- 
+</div>

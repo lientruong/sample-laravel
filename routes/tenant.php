@@ -28,6 +28,7 @@ use App\Http\Controllers\Central\Auth\VerifyEmailController;
 
 Route::middleware([
     'web',
+    'tenantWeb',
     \Stancl\Tenancy\Middleware\InitializeTenancyBySubdomain::class,
     PreventAccessFromCentralDomains::class,
     \Stancl\Tenancy\Middleware\ScopeSessions::class,
@@ -43,6 +44,10 @@ Route::middleware([
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
         ->middleware('auth')
         ->name('tenantLogout');
+
+    Route::get('eula', [AuthenticatedSessionController::class, 'getEula']);
+
+    Route::post('eula', [AuthenticatedSessionController::class, 'postEula']);
 
     //tenant dashboard - authenticated
     Route::group(['middleware' => [

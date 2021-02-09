@@ -52,4 +52,15 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/');
     }
+
+    public function getEula(Request $request) {
+        return $this->view([
+            'content' => 'pages.auth.eula',
+        ]);
+    }
+
+    public function postEula(Request $request) {
+        $request->session()->put('eula', true);
+        return redirect('/');
+    }
 }

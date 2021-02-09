@@ -80,6 +80,7 @@ Route::group(['prefix' => null, 'namespace' => 'Central', 'middleware' => ['web'
         ->middleware('auth')
         ->name('logout');
 
+
     //authenticated admin routes
     Route::group(['middleware' => ['auth', 'web']], function () {
     });

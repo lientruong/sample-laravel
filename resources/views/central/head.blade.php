@@ -21,6 +21,6 @@
         @include('common/javascriptElements', ['javascriptElements' => $javascriptElements])
     @endif
 
-    <link rel="stylesheet" href="{{ mix('/assets/tenant/css/app.css') }}"/>
-    <script src="{{ mix('/assets/tenant/js/jquery.js') }}"></script>
+    <link rel="stylesheet" href="{{ mix('/assets/central/css/app.css') }}"/>
+    <script src="{{ mix('/assets/central/js/jquery.js') }}"></script>
 </head>

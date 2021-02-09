@@ -11,6 +11,17 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/jquery-3.5.1.js', 'public/assets/tenant/js/jquery.js').version();
-mix.js('resources/js/app.js', 'public/assets/tenant/js/app.js').version();
-mix.postCss('resources/css/app.css', 'public/assets/tenant/css/app.css').version();
+//central application
+mix.scripts(['resources/js/vendor/jquery-3.5.1.js'], 'public/assets/central/js/jquery.js').version();
+
+mix.scripts(['resources/js/vendor/bootstrap-4.0.0.min.js', 'resources/js/vendor/popper.1.12.9.min.js', 'resources/js/app.js'], 'public/assets/central/js/app.js').version();
+
+mix.styles(['resources/css/vendor/bootstrap-4.0.0.min.css', 'resources/css/app.css'], 'public/assets/central/css/app.css').version();
+
+
+//tenant application
+mix.scripts(['resources/js/vendor/jquery-3.5.1.js'], 'public/assets/tenant/js/jquery.js').version();
+
+mix.scripts(['resources/js/vendor/bootstrap-4.0.0.min.js', 'resources/js/vendor/popper.1.12.9.min.js', 'resources/js/app.js'], 'public/assets/tenant/js/app.js').version();
+
+mix.styles(['resources/css/vendor/bootstrap-4.0.0.min.css', 'resources/css/app.css'], 'public/assets/tenant/css/app.css').version();

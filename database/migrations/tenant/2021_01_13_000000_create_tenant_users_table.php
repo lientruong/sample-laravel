@@ -23,7 +23,6 @@ class CreateTenantUsersTable extends Migration
             $table->timestamps();
         });
         $u = new \App\Models\User(['name' => 'test tenant', 'email' => 't@t.com', 'password' => 'abc']);
-        $u->email_verified_at = now();
         $u->password =  'abc';
         $u->save();
 /*

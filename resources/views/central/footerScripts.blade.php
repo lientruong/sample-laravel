@@ -1,1 +1,1 @@
-foot scripts
+&copy;Copyright Widgets Inc 2021
