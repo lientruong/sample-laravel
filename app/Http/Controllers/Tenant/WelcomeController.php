@@ -19,6 +19,8 @@ class WelcomeController extends Controller {
             //add in a random order
             Order::create(['document_code' => Str::random(12)]);
         }
+
+        //pass the data to the view layer
         return $this->view([
             'content' => 'pages/welcome/index',
             'orderCount' => $orderCount,
