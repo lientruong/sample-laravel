@@ -11,8 +11,8 @@ Sample Laravel is basic application demonstrating features of the Laravel
 - Eloquent ORM sample observer
 - Exception handling for non-existing tenants
 
-This sample project is to demonstrate the various functionality of a typical website using the Laravel 
-framework.
+This sample project is to illustrate the various functionality of a typical website using the Laravel 
+framework with some light customizations.
 
 ## Install & Setup
 
@@ -30,8 +30,8 @@ sample application:
 
 ## Multi-tenant development and example
 
-Multi-tenancy allows the same codebase to serve both a central application that is common to all 
-users and a tenant application specifically for each user or group of users.  This sample
+Multi-tenancy allows a single instance of the codebase to serve multiple customers 
+who shares the same application but different database and data.  This sample
 application utilizes the stancl/tenancy package as the foundation and is by no means complete as there are still some 
 architectural issues that needs to be resolved.  Tenants are configured in this sample project to resolve by subdomains and the sample tenant can be accessed [test.localhost](http://test.localhost).
 
@@ -39,7 +39,7 @@ architectural issues that needs to be resolved.  Tenants are configured in this 
 
 Both the central application and tenant application has basic authentication implemented as well as sample front-end content 
 to distinguish between the central and tenant application.
-To log into the central application, use user a@a.com and password abc.  To log into the tenant application, use t@t.com and 
+To log into the central application, click on any one  of the buttons and use user a@a.com and password abc.  To log into the tenant application, use t@t.com and 
 password abc.
 
 Files:
